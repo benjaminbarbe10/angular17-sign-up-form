@@ -1,6 +1,10 @@
 # Coding Challenge
 
-Hello reviewer! This is my submission for the coding challenge. I have included a few notes below to help you navigate the project.
+<p align="center">
+  <img width="500" alt="image" src="https://github.com/benjaminbarbe10/angular17-sign-up-form/assets/23261573/2661f663-3294-4931-8ea9-e96cceb07f1e">
+</p>
+
+Hello! This is my submission for the coding challenge. I have included a few notes below to help you navigate the project.
 
 ## Architecture
 
