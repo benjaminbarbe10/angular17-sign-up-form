@@ -1,0 +1,25 @@
+.signup-form {
+  width: 500px;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+}
+
+// Would be nice to handle responsive design with Bootstrap classes, and with BreakpointObserverService from '@angular/cdk/layout'.
+// But for this little design I used media queries.
+@media (max-width: 576px) {
+  .signup-form {
+    width: 100% !important;
+    padding-top: unset !important;
+    border: unset;
+  }
+  .sign-up-container {
+    padding-top: 0 !important;
+  }
+}
+
+.welcome-image {
+  background: url(../../../assets/images/undraw_welcome.svg) no-repeat;
+  background-size: contain;
+  height: 150px;
+  width: 150px;
+}

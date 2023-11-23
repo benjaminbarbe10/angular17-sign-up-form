@@ -1,0 +1,4 @@
+<div [class.py-1.ps-3]="size === 'sm'" class="d-flex alert pre-wrap-ws" [class]="'alert-' + color">
+  <i *ngIf="icon" [class]="'bi bi-' + icon"></i>
+  <small class="ps-2">{{ messageKey | translate }}</small>
+</div>

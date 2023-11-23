@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import 'ngx-toastr/toastr';
+
+/* General styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 100;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+}
+/* Utility classes */
+.lightgray {
+  color: lightgray;
+}
+
+.w100 {
+  width: 100%;
+}
+
+.pre-wrap-ws {
+  white-space: pre-wrap;
+}

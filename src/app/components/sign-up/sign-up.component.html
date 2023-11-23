@@ -1,0 +1,82 @@
+<div class="h-100 d-flex justify-content-center sign-up-container pt-5 align-items-start">
+  <div class="d-flex justify-content-center">
+    <div class="signup-form p-4 mt-4">
+      <div class="d-flex flex-column justify-content-center align-items-center pb-3">
+        <div class="welcome-image"></div>
+        <div class="w-100 d-flex justify-content-center pb-5 border-bottom mb-3"></div>
+        <h1>{{ 'signup.hello' | translate }}</h1>
+        <p class="text-muted">{{ 'signup.createYourAccount' | translate }}</p>
+      </div>
+      <form *ngIf="!isSignupSuccess()" [formGroup]="signupForm" (ngSubmit)="submitSignup()">
+        <div class="row">
+          <div class="col-md-6 d-flex flex-column">
+            <input
+              type="text"
+              class="form-control my-2"
+              formControlName="firstName"
+              [placeholder]="('signup.fields.firstName' | translate) + ' *'"
+              [attr.data-cy]="'firstName'"
+            />
+            <app-validation-error-messages [control]="signupForm.controls.firstName"></app-validation-error-messages>
+          </div>
+          <div class="col-md-6 d-flex flex-column">
+            <input
+              type="text"
+              class="form-control my-2"
+              formControlName="lastName"
+              [placeholder]="('signup.fields.lastName' | translate) + ' *'"
+              [attr.data-cy]="'lastName'"
+            />
+            <app-validation-error-messages [control]="signupForm.controls.lastName"></app-validation-error-messages>
+          </div>
+        </div>
+        <div class="d-flex flex-column">
+          <div class="input-group my-2">
+            <div class="input-group-text">
+              <i class="bi bi-envelope lightgray"></i>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="email"
+              [placeholder]="('signup.fields.email' | translate) + ' *'"
+              [attr.data-cy]="'email'"
+            />
+          </div>
+          <app-validation-error-messages [control]="signupForm.controls.email"></app-validation-error-messages>
+        </div>
+
+        <div class="d-flex flex-column">
+          <div class="input-group my-2">
+            <div class="input-group-text">
+              <i class="bi bi-eye lightgray"></i>
+            </div>
+            <input
+              type="password"
+              class="form-control"
+              formControlName="password"
+              [placeholder]="('signup.fields.password' | translate) + ' *'"
+              [attr.data-cy]="'password'"
+            />
+          </div>
+          <app-validation-error-messages [control]="signupForm.controls.password"></app-validation-error-messages>
+        </div>
+
+        <div class="button-bar w-100 d-flex justify-content-center mt-4">
+          <button type="submit" class="btn btn-primary" [disabled]="!signupForm.valid || isLoadingSignup()" [attr.data-cy]="'submitSignup'">
+            <i *ngIf="isLoadingSignup()" class="bi bi-arrow-clockwise me-1 lightgray"></i>
+            <i *ngIf="!isLoadingSignup()" class="bi bi-box-arrow-in-right me-1"></i>
+            {{ 'signup.signUp' | translate }}
+          </button>
+        </div>
+      </form>
+      <div class="d-flex flex-column align-items-center" *ngIf="isSignupSuccess()">
+        <app-notification [icon]="'check'" [color]="'success'" [size]="'lg'" [messageKey]="'signup.successMessage'"></app-notification>
+        <button type="button" class="btn btn-primary pt-2" (click)="backToSIgnUpPage()" [attr.data-cy]="'backToSignUpPage'">
+          <i class="bi bi-box-arrow-in-left me-1"></i>
+          {{ 'signup.backToSignUpPage' | translate }}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

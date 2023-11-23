@@ -1,0 +1,61 @@
+<div *ngIf="control.invalid && (control.dirty || control.touched)">
+  <app-notification
+    icon
+    *ngIf="control.errors?.['required']"
+    [icon]="'exclamation-triangle-fill'"
+    [messageKey]="'error.field.required'"
+    class="my-2"
+  ></app-notification>
+
+  <app-notification
+    *ngIf="control.errors?.['invalidName']"
+    [icon]="'exclamation-triangle-fill'"
+    [messageKey]="'error.field.invalidName'"
+    class="my-2"
+  ></app-notification>
+
+  <app-notification
+    *ngIf="control.errors?.['invalidEmail']"
+    [icon]="'exclamation-triangle-fill'"
+    [messageKey]="'error.field.invalidEmail'"
+    class="my-2"
+  ></app-notification>
+
+  <app-notification
+    *ngIf="control.errors?.['invalidPassword']"
+    [messageKey]="'error.field.invalidPassword'"
+    class="my-2"
+    [icon]="'exclamation-triangle-fill'"
+  ></app-notification>
+
+  <app-notification
+    *ngIf="control.errors?.['invalidPassword']?.['containsLastName'] || control.errors?.['invalidPassword']?.['containsFirstName']"
+    [messageKey]="'error.field.passwordContainsName'"
+    class="my-2"
+    [icon]="'exclamation-triangle-fill'"
+  ></app-notification>
+
+  <app-notification
+    *ngIf="control.errors?.['minlength']"
+    [messageKey]="'error.field.minlength'"
+    [color]="'warning'"
+    class="my-2"
+    [icon]="'exclamation-triangle-fill'"
+  ></app-notification>
+
+  <app-notification
+    *ngIf="control.errors?.['maxlength']"
+    [messageKey]="'error.field.maxlength'"
+    [color]="'warning'"
+    class="mb-2"
+    [icon]="'exclamation-triangle-fill'"
+  ></app-notification>
+
+  <app-notification
+    class="password-validation"
+    *ngIf="control.errors?.['invalidPassword']"
+    [color]="'light'"
+    [messageKey]="'signup.passwordMustContainValidCharacters'"
+  >
+  </app-notification>
+</div>

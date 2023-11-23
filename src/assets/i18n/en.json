@@ -1,0 +1,29 @@
+{
+  "signup": {
+    "hello": "Hello.",
+    "createYourAccount": "Create your account",
+    "yourCredentials": "Your credentials",
+    "enterEmailAndPassword": "Enter your email and password",
+    "signUp": "Sign up",
+    "signupSuccessfully": "You have successfully signed up",
+    "signupError": "An error occurred while signing up",
+    "fields": {
+      "email": "Email",
+      "password": "Password",
+      "firstName": "First name",
+      "lastName": "Last name"
+    },
+    "backToSignUpPage": "Back to sign up page",
+    "successMessage": "You have successfully signed up",
+    "passwordMustContainValidCharacters": "Password must contain at least : \n- One lowercase \n- One uppercase \n- One number \n- 8 characters \n- Not contain your first or last name"
+  },
+  "error": {
+    "field": {
+      "required": "This field is required",
+      "invalidName": "Name is invalid",
+      "invalidEmail": "Invalid email",
+      "invalidPassword": "Invalid password",
+      "passwordContainsName": "Password cannot contain your first or last name"
+    }
+  }
+}
