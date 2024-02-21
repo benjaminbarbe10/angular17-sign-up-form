@@ -71,4 +71,4 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Further help
 
-To get more help, feel free to contact me: **benjamin@techspike.fr**
+To get more help, feel free to contact me: **benjamin@techspike.fr**.
